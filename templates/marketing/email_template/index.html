@@ -17,7 +17,7 @@
                   <div class="filter_col col-md-3">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Name</label>
-                      <input type="text" class="form-control" placeholder="Template Name" name="template_name"
+                      <input type="text" class="form-control" placeholder="Query Title" name="template_name"
                         value="{{request.POST.template_name}}">
                     </div>
                   </div>
@@ -55,11 +55,11 @@
         <div class="card">
           <div class="card-body">
             <div class="card-title text-right">
-              <span class="float-left">Email Templates - {{email_templates|length}}</span>
+              <span class="float-left">Pending queries - {{email_templates|length}}</span>
               <span class="filter_toggle">
                 <a href="#" class="primary_btn"><i class="fas fa-filter"></i></a>
               </span>
-              <a href="{% url 'marketing:email_template_new' %}" class="primary_btn">Add New Email Template</a>
+              <a href="{% url 'marketing:email_template_new' %}" class="primary_btn">Add New Query</a>
             </div>
             <div class="table-responsive table-bordered ">
               <table class="table">
@@ -67,10 +67,10 @@
                 <thead>
                   <tr>
                     <th width="5%" class="text-center">S. No</th>
-                    <th width="20%" class="text-center">Template Name</th>
-                    <th width="15%" class="text-center">Created By</th>
-                    <th width="10%" class="text-center">Created On</th>
-                    <th width="10%" class="text-center">Create Campaign</th>
+                    <th width="20%" class="text-center">Query title</th>
+                    <th width="15%" class="text-center">Asked By</th>
+                    <th width="10%" class="text-center">Asked On</th>
+                    <th width="10%" class="text-center">Create Answer</th>
                     
                     <th width="15%" class="text-center">Actions</th>
                   </tr>
