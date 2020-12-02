@@ -54,11 +54,14 @@
                 
               </div>
             </div>
+
+       
+
             <div class="col-md-3">
               <div class="item red">
-                <a href="{% url 'marketing:contacts_list' %}">
+                <a href="{% url 'contacts:list' %}">
                   <div class="title">Students</div>
-                  <div class="count">{{contacts|length}}</div>
+                  <div class="count">{{contacts_count}}</div>
                   
                 </a>
               </div>
