@@ -158,12 +158,12 @@
                           </td>
                           <td>
                             {% if user.is_superuser or user.role == 'ADMIN' %}
-                            Sales, Marketing
+                            Student, Teacher
                             {% else %}
                             {% if user.has_sales_access and user.has_marketing_access %}
-                            Sales, Marketing
+                            Student, Teacher
                             {% elif user.has_sales_access and not user.has_marketing_access %}
-                            Sales
+                            Student
                             {% elif not user.has_sales_access and user.has_marketing_access %}
                             Marketing
                             {% else %}
