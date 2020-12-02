@@ -110,13 +110,13 @@
                 <br>
                 
                 <div class="btn-group">
-                  <label class="btn "> Sales
+                  <label class="btn "> Student
                     <input type="checkbox" name="has_sales_access" id="has_sales_access_" autocomplete="off"
                       {% if user_obj.has_sales_access %} checked {% endif %}
                       {% if user_obj.is_superuser or user_obj.role == 'ADMIN' %} disabled="disabled" readonly="readonly"
                       checked="checked" {% endif %}>
                   </label>
-                  <label class="btn "> Marketing
+                  <label class="btn "> Teacher
                     <input type="checkbox" name="has_marketing_access" id="has_marketing_access_" autocomplete="off"
                       {% if user_obj.has_marketing_access %} checked {% endif %}
                       {% if user_obj.is_superuser or user_obj.role == 'ADMIN' %} disabled="disabled" readonly="readonly"

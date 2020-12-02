@@ -113,7 +113,7 @@
               {% if account_record.billing_address_line or account_record.billing_street or  account_record.billing_city or   account_record.billing_state or account_record.billing_postcode or account_record.billing_country %}
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label class="acc_field_label" for="id_billing_address" data-name="name">Billing Address</label>
+                  <label class="acc_field_label" for="id_billing_address" data-name="name">Address</label>
                   <div class="account_field" id="account_billing_address" data-name="name">
                     {{account_record.get_complete_address}}
                   </div>

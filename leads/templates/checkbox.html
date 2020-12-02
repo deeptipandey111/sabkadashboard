@@ -89,7 +89,7 @@
               <div class="col-md-6">
                 <div class="filter_col billing_block col-md-12">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Billing Address</label>
+                    <label for="exampleInputEmail1">Address</label>
                     <input type="text" class="form-control" placeholder="Street" id="bstreet" name="street" {%if edit1%} value="{{edit1.street}}" {% else %} value="{% if request.POST %}{{request.POST.street}}{%endif%}" {% endif %} />
                   </div>
                   <div class="row">

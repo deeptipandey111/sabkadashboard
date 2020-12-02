@@ -35,7 +35,7 @@ class AccountForm(forms.ModelForm):
         self.fields["billing_street"].widget.attrs.update({"placeholder": "Street"})
         self.fields["billing_city"].widget.attrs.update({"placeholder": "Class"})
         self.fields["billing_state"].widget.attrs.update({"placeholder": "Section"})
-        self.fields["billing_postcode"].widget.attrs.update({"placeholder": "UMIS"})
+        self.fields["billing_postcode"].widget.attrs.update({"placeholder": "UMID"})
         self.fields["billing_country"].choices = [("", "--Country--"),] + list(
             self.fields["billing_country"].choices
         )[1:]
