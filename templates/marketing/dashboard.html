@@ -49,19 +49,16 @@
               <div class="item green">
                 <a href="{% url 'contacts:list' %}">
                   <div class="title">Student Rosters</div>
-                  <div class="count">{{contacts_list|length}}</div>
+                  <div class="count">{{contacts_count}}</div>
                 </a>
                 
               </div>
             </div>
-
-       
-
             <div class="col-md-3">
               <div class="item red">
-                <a href="{% url 'contacts:list' %}">
+                <a href="{% url 'marketing:contacts_list' %}">
                   <div class="title">Students</div>
-                  <div class="count">{{contacts_count}}</div>
+                  <div class="count">{{contacts|length}}</div>
                   
                 </a>
               </div>
