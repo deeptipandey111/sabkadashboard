@@ -4,7 +4,7 @@ from sentry_sdk.integrations.django import DjangoIntegration
 
 DEBUG = False
 
-DOMAIN_NAME = "bottlecrm.com"
+DOMAIN_NAME = "deeptipandey.site"
 
 AWS_STORAGE_BUCKET_NAME = AWS_BUCKET_NAME = os.getenv("AWS_BUCKET_NAME", "")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID", "")
@@ -42,7 +42,7 @@ COMPRESS_URL = STATIC_URL
 
 EMAIL_BACKEND = "django_ses.SESBackend"
 
-SESSION_COOKIE_DOMAIN = ".bottlecrm.com"
+SESSION_COOKIE_DOMAIN = ".deeptipandey.site"
 
 ELASTIC_APM = {
     "SERVICE_NAME": os.getenv("ELASTIC_APM_SERVICE_NAME"),
