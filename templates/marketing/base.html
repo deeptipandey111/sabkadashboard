@@ -60,7 +60,7 @@
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <a class="dropdown-item" href="/">Sales</a>
-      <a class="dropdown-item" href="{% url 'marketing:dashboard' %}">Marketing</a>
+      <a class="dropdown-item" href="{% url 'marketing:dashboard' %}">Student Com</a>
     </div>
   </div>
   
@@ -98,23 +98,22 @@
   <div class="menu_block">
     <ul class="main_menu">
       <li class="parent_menu">
-        <a href="{% url 'marketing:contact_lists' %}" class="red"><i class="far fa-address-book"></i>Contacts</a>
+        <a href="{% url 'marketing:contact_lists' %}" class="red"><i class="far fa-address-book"></i>Students</a>
         <ul class="submenu">
-          <li><a href="{% url 'marketing:contacts_list' %}" class="yellow"><i class="fas fa-bars"></i>All Contacts</a>
+          <li><a href="{% url 'marketing:contacts_list' %}" class="yellow"><i class="fas fa-bars"></i>All Students</a>
           </li>
           <li><a href="{% url 'marketing:contact_list_new' %}" class="yellow"><i class="far fa-plus-square"></i>Create
-              Contact</a></li>
+              Student</a></li>
         </ul>
       </li>
       <li class="parent_menu">
-        <a href="{% url 'marketing:email_template_list' %}" class="purple"><i class="fas fa-envelope-open"></i>Email
-          Templates</a>
+        <a href="{% url 'marketing:email_template_list' %}" class="purple"><i class="fas fa-envelope-open"></i>Queries</a>
         <ul class="submenu">
           <li><a href="{% url 'marketing:email_template_list' %}" class="d_green"><i class="fas fa-bars"></i>All
-              Templates</a></li>
+              Queries</a></li>
           <li><a href="{% url 'marketing:email_template_new' %}" class="d_green"><i
-                class="far fa-plus-square"></i>Create
-              Template</a></li>
+                class="far fa-plus-square"></i>Answer
+              Query</a></li>
         </ul>
       </li>
       <li class="parent_menu">

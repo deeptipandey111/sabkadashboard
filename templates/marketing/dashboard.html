@@ -39,7 +39,7 @@
             <div class="col-md-3">
               <div class="item sky_blue">
                 <a href="{% url 'marketing:email_template_list'%}">
-                  <div class="title">Email Templates</div>
+                  <div class="title">Queries</div>
                   <div class="count">{{email_templates|length}}</div>
                   
                 </a>
@@ -48,7 +48,7 @@
             <div class="col-md-3">
               <div class="item green">
                 <a href="{% url 'marketing:contact_lists' %}">
-                  <div class="title">Contacts List</div>
+                  <div class="title">Student Rosters</div>
                   <div class="count">{{contacts_list|length}}</div>
                 </a>
                 
@@ -87,7 +87,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="card-title">
-                    <span>Contacts List</span>
+                    <span>Student Rosters</span>
                   </div>
                   <div class="table-responsive">
                     {% if contacts_list %}
