@@ -30,7 +30,7 @@ class AccountForm(forms.ModelForm):
                 value.widget.attrs["placeholder"] = value.label
 
         self.fields["billing_address_line"].widget.attrs.update(
-            {"placeholder": "Address Line"}
+            {"placeholder": "Science"}
         )
         self.fields["billing_street"].widget.attrs.update({"placeholder": "Street"})
         self.fields["billing_city"].widget.attrs.update({"placeholder": "City"})
