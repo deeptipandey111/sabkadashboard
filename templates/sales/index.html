@@ -21,7 +21,7 @@
       <div class="col-md-3">
         <div class="item sky_blue">
           <a href="{% url 'accounts:list'%}">
-            <div class="title">Accounts</div>
+            <div class="title">Courses</div>
             <div class="count">{{accounts|length}}</div>
             
           </a>
@@ -30,7 +30,7 @@
       <div class="col-md-3">
         <div class="item green">
           <a href="{% url 'contacts:list' %}">
-            <div class="title">Contacts</div>
+            <div class="title">Students</div>
             <div class="count">{{contacts_count}}</div>
           </a>
           
@@ -39,8 +39,8 @@
       <div class="col-md-3">
         <div class="item red">
           <a href="{% url 'leads:list' %}">
-            <div class="title">Leads</div>
-            <div class="count">{{leads_count|length}}</div>
+            <div class="title">Requests</div>
+            <div class="count">{{cases|length}}</div>
             
           </a>
         </div>
