@@ -179,7 +179,7 @@
                           {% else %}
                           <a href="{% url 'common:view_user' user.id %}">
                             <img src="{% cache 600 default_profile_pic %}{% static 'images/user.png' %}{% endcache %}"
-                              alt="Micro profile pic"
+                              alt=""
                               style="width: 40px;height: 40px;" title="{{ lead.created_by }}" />
                           </a>
                           {% endif %}

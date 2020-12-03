@@ -104,7 +104,7 @@
               <a href="#" class="dropdown-toggle abcd nav-link" data-toggle="dropdown" role="button"
                 aria-haspopup="true" aria-expanded="false">
                 {% if not request.user.profile_pic %}
-                <img src="{% static 'images/user.png' %}" alt="Micro profile pic">
+                <img src="{% static 'images/user.png' %}" alt="">
                 {% else %}
                 {% thumbnail request.user.profile_pic "25x25" as im %}
                 <img src="{{ im.url }}">
