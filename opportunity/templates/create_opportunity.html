@@ -79,24 +79,8 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Lead Source{% if opportunity_form.lead_source.field.required %}<span
-                      class="error">*</span>{% endif %}</label>
-                  {{ opportunity_form.lead_source }}
-                  <span class="error error_message"
-                    id="error_id_lead_source">{{opportunity_form.lead_source.errors}}</span>
-                </div>
-              </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Probability %{% if opportunity_form.probability.field.required %}<span
-                      class="error">*</span>{% endif %}</label>
-                  {{ opportunity_form.probability }}
-                  <span class="error error_message"
-                    id="error_id_probability">{{opportunity_form.probability.errors}}</span>
-                </div>
-              </div>
+
+             
               {% if request.user.is_superuser or request.user.role == 'ADMIN' %}
               <div class="filter_col col-12">
                 <div class="form-group">
@@ -113,26 +97,6 @@
                 </div>
               </div>
 
-              <div class="filter_col col-12">
-                <div class="form-group">
-                  <label for="id_sattus"><span class="">Users</span></label>
-                  <select name="" aria-readonly="true" id="_id_assigned_to" class=" form-control" multiple>
-                    {% if opportunity_obj and opportunity_obj.teams.all %}
-                    {% for user in users %}
-                    {% if user in opportunity_obj.get_team_users %}
-                    <option value="{{user.id}}" selected="">{{user.email}}</option>
-                    {% else %}
-                    <option value="{{user.id}}">{{user.email}}</option>
-                    {% endif %}
-                    {% endfor %}
-                    {% else %}
-                    {% for user in users %}
-                    <option value="{{user.id}}">{{user.email}}</option>
-                    {% endfor %}
-                    {% endif %}
-                  </select>
-                </div>
-              </div>
 
               {% endif %}
               <div class="filter_col col-md-12">
