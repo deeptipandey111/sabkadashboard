@@ -3,7 +3,7 @@
 {% block breadcrumb %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'opportunities:list' %}">Opportunities</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'opportunities:list' %}">Regrades</a></li>
     <li class="breadcrumb-item active">{% if opportunity_obj %}Edit{% else %}Create{% endif %}</li>
   </ol>
 </nav>
@@ -21,7 +21,7 @@
       <div class="card">
         <div class="card-body">
           <div class="card-title text-center">
-            {% if opportunity_obj %}EDIT{% else %}CREATE{% endif %} OPPORTUNITY
+            {% if opportunity_obj %}EDIT{% else %}CREATE{% endif %} REGRADE
           </div>
           <div class="row marl no-gutters">
             <div class="col-md-4">
@@ -36,7 +36,7 @@
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Account{% if opportunity_form.account.field.required %}<span
+                  <label for="exampleInputEmail1">Course{% if opportunity_form.account.field.required %}<span
                       class="error">*</span>{% endif %}</label>
                   {% if account %}
                   <select name="account" placeholder="Account" class="form-control" id="id_account" readonly>
@@ -48,25 +48,8 @@
                   <span class="error error_message" id="error_id_account">{{opportunity_form.account.errors}}</span>
                 </div>
               </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Amount</label>
-                  {{ opportunity_form.amount }}
-                  <span class="error error_message" id="error_id_amount">{{opportunity_form.amount.errors}}</span>
-                </div>
-              </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Currency</label>
-                  <select name="currency" id="id_currency" class="form-control">
-                    <option value="">----------</option>
-                    {% for currency in currencies %}
-                    <option value="{{currency.0}}" {% if opportunity_obj.currency == currency.0 %} selected=""
-                      {% endif %}>{{currency.1}}</option>
-                    {% endfor %}
-                  </select>
-                  <span class="error error_message" id="error_id_currency">{{opportunity_form.currency.errors}}</span>
-                </div>
+
+>
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
@@ -113,63 +96,11 @@
                 </div>
               </div>
 
-              <div class="filter_col col-12">
-                <div class="form-group">
-                  <label for="id_sattus"><span class="">Users</span></label>
-                  <select name="" aria-readonly="true" id="_id_assigned_to" class=" form-control" multiple>
-                    {% if opportunity_obj and opportunity_obj.teams.all %}
-                    {% for user in users %}
-                    {% if user in opportunity_obj.get_team_users %}
-                    <option value="{{user.id}}" selected="">{{user.email}}</option>
-                    {% else %}
-                    <option value="{{user.id}}">{{user.email}}</option>
-                    {% endif %}
-                    {% endfor %}
-                    {% else %}
-                    {% for user in users %}
-                    <option value="{{user.id}}">{{user.email}}</option>
-                    {% endfor %}
-                    {% endif %}
-                  </select>
-                </div>
-              </div>
+             
 
               {% endif %}
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Assigned Users</label>
-                  <select class="assigned_users form-control" name="assigned_to" multiple="multiple"
-                    id="id_assigned_to">
-                    {% for user in users %}
-                    <option value="{{user.id}}"
-                      {% if user in opportunity_obj.get_assigned_users_not_in_teams or user.id in assignedto_list %} selected=""
-                      {% endif %}>{{user.email}}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-              </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Contacts{% if opportunity_form.contacts.field.required %}<span
-                      class="error">*</span>{% endif %}</label>
-                  {{ opportunity_form.contacts }}
-                  <span class="error error_message" id="error_id_contacts">{{opportunity_form.contacts.errors}}</span>
-                </div>
-              </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Due Date{% if opportunity_form.closed_on.field.required %}<span
-                      class="error">*</span>{% endif %}</label>
-                  <div class='input-group date' id='datepicker1'>
-                    {{ opportunity_form.closed_on }}
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                  <span class="error error_message" id="error_id_closed_on">{{opportunity_form.closed_on.errors}}</span>
-                </div>
-              </div>
-            </div>
+          
+
             <div class="col-md-4">
               <div class="filter_col col-12">
                 <div class="form-group">

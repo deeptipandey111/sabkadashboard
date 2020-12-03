@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'contacts:list' %}">Contacts</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'contacts:list' %}">Students</a></li>
     <li class="breadcrumb-item active">{% if contact_obj %}Edit{% else %}Create{% endif %}</li>
   </ol>
 </nav>
@@ -16,7 +16,7 @@
       <div class="card">
         <div class="card-body">
           <div class="card-title text-center">
-            {% if contact_obj %}EDIT{% else %}CREATE{% endif %} CONTACT
+            {% if contact_obj %}EDIT{% else %}CREATE{% endif %} Student
           </div>
           <div class="row marl no-gutters justify-content-center">
             <div class="col-md-4">
