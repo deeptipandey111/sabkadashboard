@@ -13,10 +13,6 @@
         Courses
       </button>
       <div class="dropdown-menu mt-2">
-        <a class="dropdown-item contact-list" id="contact-list" href="{% url 'marketing:contact_lists' %}">Contacts
-          List</a>
-        
-        <a class="dropdown-item contacts" id="contacts" href="{% url 'marketing:contacts_list' %}">Contacts</a>
         <a class="dropdown-item contacts" id="contacts" href="{% url 'marketing:contacts_list' %}">Science</a>
         <a class="dropdown-item contacts" id="contacts" href="{% url 'marketing:contacts_list' %}">Math</a>
         <a class="dropdown-item contacts" id="contacts" href="{% url 'marketing:contacts_list' %}">English</a>
@@ -27,7 +23,7 @@
 
   
   <li class="nav-item"><a class="nav-link" id="email-templates" href="{% url 'marketing:email_template_list' %}">Queries</a></li>
-  <li class="nav-item"><a class="nav-link" id="campaigns" href="{% url 'leads:list' %}">Tasks</a></li>
+  <li class="nav-item"><a class="nav-link" id="campaigns" href="{% url 'tasks:tasks_list' %}">Tasks</a></li>
   {% endif %}
   
 </ul>
@@ -120,9 +116,9 @@
         </ul>
       </li>
       <li class="parent_menu">
-        <a href="{% url 'leads:list' %}" class="green"><i class="fas fa-at"></i>Tasks</a>
+        <a href="{% url 'tasks:tasks_list' %}" class="green"><i class="fas fa-at"></i>Tasks</a>
         <ul class="submenu">
-          <li><a href="{% url 'leads:list' %}" class="sabka_light_green"><i class="fas fa-bars"></i>All
+          <li><a href="{% url 'tasks:tasks_list' %}" class="sabka_light_green"><i class="fas fa-bars"></i>All
               Tasks</a></li>
           <li><a href="{% url 'tasks:task_create' %}" class="sabka_light_green"><i class="far fa-plus-square"></i>Create
               Task</a></li>
