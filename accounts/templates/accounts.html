@@ -21,7 +21,7 @@
   <div class="row marl">
     <div class="col-lg-12 text-right">
       <span class="d-inline"><a class="primary_btn" href="{% url 'accounts:new_account' %}"><i class="fa fa-plus"></i>
-          Add New Account</a></span>
+          Add New Course</a></span>
     </div>
   </div>
   <div class="filter_row list_filter_row row marl">
@@ -84,17 +84,14 @@
               <a class="nav-link active" id="open-tab" data-toggle="tab" href="#open" role="tab" aria-controls="open"
                 aria-selected="true">Active ({{open_accounts|length}})</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="close-tab" data-toggle="tab" href="#close" role="tab" aria-controls="close"
-                aria-selected="false">Closed ({{close_accounts|length}})</a>
-            </li>
+            
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="open" role="tabpanel" aria-labelledby="open">
               <div class="card">
                 <div class="card-body">
                   <div class="panel-heading-list card-title text-right">
-                    <span class="total_count float-left">Open Accounts - {% if show_pageitems %}
+                    <span class="total_count float-left">Courses - {% if show_pageitems %}
                       {% show_pageitems %}{% else %}{{open_accounts|length}}{% endif %}</span>
                     <span class="filter_toggle ">
                       <a href="#" class="primary_btn"><i class="fas fa-filter"></i></a>
@@ -108,8 +105,6 @@
                           <th width="5%">ID</th>
                           <th width="12%">Name</th>
                           <th width="8%">Created By</th>
-                          <th width="5%">City</th>
-                          <th width="5%">State</th>
                           <th width="10%">Created On</th>
                           <th width="10%">Tags</th>
                           <th width="10%">Actions</th>
@@ -145,10 +140,7 @@
                             None
                             {% endif %}
                           </td>
-                          <td>{% if each_account.billing_city %}{{ each_account.billing_city }} {% else %} Not specified
-                            {% endif %}</td>
-                          <td>{% if each_account.billing_state %}{{ each_account.billing_state }} {% else %} Not
-                            specified {% endif %}</td>
+                          
                           <td title="{{each_account.created_on}}">{{ each_account.created_on_arrow }}</td>
                           <td style="display: block;">
                             {% with tags=each_account.tags.all %}
