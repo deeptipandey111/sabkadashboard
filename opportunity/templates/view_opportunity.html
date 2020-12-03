@@ -13,7 +13,7 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'opportunities:list' %}">Opportunities</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'opportunities:list' %}">Regrades</a></li>
     <li class="breadcrumb-item active">View</li>
   </ol>
 </nav>
@@ -52,7 +52,7 @@
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label class="opportunity_field_label" for="id_opportunity_account" data-name="name">Account</label>
+                  <label class="opportunity_field_label" for="id_opportunity_account" data-name="name">Course</label>
                   <div class="opportunity_field" id="opportunity_account" data-name="name">
                     {{ opportunity_record.account }}</div>
                 </div>
@@ -60,7 +60,7 @@
               <div class="filter_col col-md-12">
                 {% if opportunity_record.contacts.all %}
                 <div class="form-group">
-                  <label class="opportunity_field_label" for="id_contact" data-name="name">Contact(s)</label>
+                  <label class="opportunity_field_label" for="id_contact" data-name="name">Student(s)</label>
                   <div class="opportunity_field" id="opportunity_contact" data-name="name">
                     {% for contact in opportunity_record.contacts.all %}
                     <li>{{ contact }}</li>
