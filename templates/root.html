@@ -48,14 +48,14 @@
         <div class="dropdown">
 
             {% if request.user.is_superuser or request.user.role == 'ADMIN' %}
-            <!-- <a class="dropdown-toggle navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" style="color:#202F25"> -->
+            <a class="dropdown-toggle navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="false" aria-expanded="false" style="color:#202F25">
             {{ settings.APPLICATION_NAME }}
             </a>
             {% else %}
             {% if request.user.has_sales_access and request.user.has_marketing_access %}
-            <!-- <a class="dropdown-toggle navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" style="color:#202F25"> -->
+            <a class="dropdown-toggle navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="false" aria-expanded="false" style="color:#202F25">
             {{ settings.APPLICATION_NAME }}
             </a>
             {% elif request.user.has_sales_access and not request.user.has_marketing_access %}
