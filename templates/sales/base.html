@@ -5,9 +5,9 @@
   {% if request.user.is_superuser or request.user.role == 'ADMIN' or request.user.has_sales_access %}
   <li class="nav-item"><a class="nav-link" id="dashboard" href="{% url 'common:dashboard' %}">Dashboard</a></li>
   <li class="nav-item"><a class="nav-link" id="accounts" href="{% url 'accounts:list' %}">Accounts</a></li>
-  <li class="nav-item"><a class="nav-link" id="contacts" href="{% url 'contacts:list' %}">Contacts</a></li>
-  <li class="nav-item"><a class="nav-link" id="leads" href="{% url 'leads:list' %}">Leads</a></li>
-  <li class="nav-item"><a class="nav-link" id="opportunities" href="{% url 'opportunities:list' %}">Opportunities</a>
+  <li class="nav-item"><a class="nav-link" id="contacts" href="{% url 'contacts:list' %}">Students</a></li>
+<!--   <li class="nav-item"><a class="nav-link" id="leads" href="{% url 'leads:list' %}">Leads</a></li>
+ -->  <li class="nav-item"><a class="nav-link" id="opportunities" href="{% url 'opportunities:list' %}">Opportunities</a>
   </li>
   <li class="nav-item"><a class="nav-link" id="cases" href="{% url 'cases:list' %}">Cases</a></li>
   <li class="nav-item"><a class="nav-link" id="documents" href="{% url 'common:doc_list' %}">Documents</a></li>
