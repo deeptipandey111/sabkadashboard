@@ -3,7 +3,7 @@
 {% block breadcrumb %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'opportunities:list' %}">Opportunities</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'opportunities:list' %}">Regrades</a></li>
     <li class="breadcrumb-item active">{% if opportunity_obj %}Edit{% else %}Create{% endif %}</li>
   </ol>
 </nav>
@@ -21,7 +21,7 @@
       <div class="card">
         <div class="card-body">
           <div class="card-title text-center">
-            {% if opportunity_obj %}EDIT{% else %}CREATE{% endif %} OPPORTUNITY
+            {% if opportunity_obj %}EDIT{% else %}CREATE{% endif %} Regrades
           </div>
           <div class="row marl no-gutters">
             <div class="col-md-4">
@@ -36,7 +36,7 @@
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Account{% if opportunity_form.account.field.required %}<span
+                  <label for="exampleInputEmail1">Course{% if opportunity_form.account.field.required %}<span
                       class="error">*</span>{% endif %}</label>
                   {% if account %}
                   <select name="account" placeholder="Account" class="form-control" id="id_account" readonly>
