@@ -11,7 +11,7 @@ Opportunity
 |  They are two types of leads open and closed
 |  You can filter the results by name, stage, account, lead source
 
-|  Create a new Lead using the button on right corner ``+ Add New Opportunity``
+|  Create a new Lead using the button on right corner ``+ Add New Regrade``
 
 
 |  **Fig** Opportunity Create Page
