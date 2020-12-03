@@ -48,26 +48,8 @@
                   <span class="error error_message" id="error_id_account">{{opportunity_form.account.errors}}</span>
                 </div>
               </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Amount</label>
-                  {{ opportunity_form.amount }}
-                  <span class="error error_message" id="error_id_amount">{{opportunity_form.amount.errors}}</span>
-                </div>
-              </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Currency</label>
-                  <select name="currency" id="id_currency" class="form-control">
-                    <option value="">----------</option>
-                    {% for currency in currencies %}
-                    <option value="{{currency.0}}" {% if opportunity_obj.currency == currency.0 %} selected=""
-                      {% endif %}>{{currency.1}}</option>
-                    {% endfor %}
-                  </select>
-                  <span class="error error_message" id="error_id_currency">{{opportunity_form.currency.errors}}</span>
-                </div>
-              </div>
+
+
               <div class="filter_col col-md-12">
                 <div class="form-group">
                   <label for="exampleInputEmail1"
@@ -99,27 +81,7 @@
 
 
               {% endif %}
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Assigned Users</label>
-                  <select class="assigned_users form-control" name="assigned_to" multiple="multiple"
-                    id="id_assigned_to">
-                    {% for user in users %}
-                    <option value="{{user.id}}"
-                      {% if user in opportunity_obj.get_assigned_users_not_in_teams or user.id in assignedto_list %} selected=""
-                      {% endif %}>{{user.email}}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-              </div>
-              <div class="filter_col col-md-12">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Contacts{% if opportunity_form.contacts.field.required %}<span
-                      class="error">*</span>{% endif %}</label>
-                  {{ opportunity_form.contacts }}
-                  <span class="error error_message" id="error_id_contacts">{{opportunity_form.contacts.errors}}</span>
-                </div>
-              </div>
+
               <div class="filter_col col-md-12">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Due Date{% if opportunity_form.closed_on.field.required %}<span
